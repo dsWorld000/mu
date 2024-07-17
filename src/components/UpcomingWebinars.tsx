@@ -1,9 +1,12 @@
 "use client"
 import Link from 'next/link'
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { useId } from 'react';
 
 
 function UpcomingWebinars() {
+  
+  const id = useId();
 
     const featuredWebinars = [
         {
@@ -65,7 +68,7 @@ function UpcomingWebinars() {
                     {
                         title: webinar.title,
                         description: webinar.description,
-                        link: "/"
+                        link: `http://localhost:${id}`
                     }
                 ))}
                 />
